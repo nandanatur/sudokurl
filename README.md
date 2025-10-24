@@ -21,8 +21,30 @@ Reinforcement Learning is a type of machine learning where an agent learns to ma
 1. Robot: Navigating Maze
 2. Healthcare: Patient responses to new medications
 3. NN: Searching for new activation functions
+4. Sudoku: Solving Constraint Satisfaction problems
 
+**Sudoku**
+This repo provides details on solving Sudoku problems using RL. Sudoku Extreme samples are taken from https://huggingface.co/datasets/sapientinc/sudoku-extreme/resolve/main/train.csv?download=true
 
+I tried different strategies to completely solve Sudoku puzzle, but none of them were able to solve 100%
 
+Strategy #1: Decay epsilon over time
+We tend to explore more initially and stick to known patterns with more experience. With this intuition, I tried different decay patterns
+1. linear
+2. wrt episodes left
+3. something with curve
+What worked best was the linear decay improving by 5% to 10%
 
+Strategy #2: During exploration instead of randomly picking one of the options, pick the one based on more cell density
+When we play Sudoku, we tend to start filling from the cells where its denser.
+This instantly boosted the accuracy by 3% to 5%
 
+Strategy #3: When training the NN, use swish instead of relu
+This improved inference by 3% to 5%
+
+Strategy #4: Incorporate backtracking into RL on hitting a dead-end, rolling back state, Q-table, reward, etc
+This should have provided the ability to solve Sudoku, but the puzzle remained unsolved
+
+Strategy #5: Ditch RL and use backtracking to solve Sudoku
+Although the puzzle was solved every single time and data was used to train CNN.
+The CNN inference was completely wrong.
