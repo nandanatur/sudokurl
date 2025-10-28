@@ -54,10 +54,12 @@ Backtracking is amazing, it solves Sudoku puzzle every single time. It does this
 
 To better understand RL with backtracking quantitatively, I took a puzzle and captured number of backtracks vs various Epsilon values.
 
-Epsilon values ranged from 0.1 to 0.9
-Y-axis shows the number of backtracks (lower the better) taken over 10 samples
+
+Epsilon values ranged from 0.1 to 0.9. Y-axis shows the number of backtracks (lower the better) taken over 10 samples
+
 ![Efficacy of RL with backtracking vs Pure backtracking](artifacts/rlEfficacy-1.png)
 
 See the average/min/max number of backtracks with and without RL
+
 ![Efficacy of RL with backtracking vs Pure backtracking](artifacts/rlEfficacy-2.png)
 
