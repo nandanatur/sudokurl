@@ -48,3 +48,11 @@ This should have provided the ability to solve Sudoku, but the puzzle remained u
 Strategy #5: Ditch RL and use backtracking to solve Sudoku
 Although the puzzle was solved every single time and data was used to train CNN.
 The CNN inference was completely wrong.
+
+Strategy #6: Combine RL with backtracking to solve Sudoku
+Backtracking is amazing, it solves Sudoku puzzle every single time. It does this because it's able to iterate every possible combination of ( row, col, num ) triplet to find the solution. The cost paid with pure backtracking solution is ofcource the number of backtracks. The next question then becomes how do you decrease the number of backtracks to converge to the solution faster. This is where Reinforcement Learning shines!
+
+To better understand RL with backtracking quantitatively, I took a puzzle and captured number of backtracks vs various Epsilon values.
+
+
+
